@@ -7,6 +7,8 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update --fix-missing && apt-get install -y \
   curl \
   git \
+  libffi-dev \
+  libssl-dev \
   libxml2-dev \
   libxslt1-dev \
   python-dev \
