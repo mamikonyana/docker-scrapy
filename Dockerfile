@@ -10,7 +10,8 @@ RUN apt-get update --fix-missing && apt-get install -y \
   libxml2-dev \
   libxslt1-dev \
   python-dev \
-  python-pip
+  python-pip \
+  zlib1g-dev
 
 RUN pip install scrapy==1.0.3 ipython==4.0.0
 
