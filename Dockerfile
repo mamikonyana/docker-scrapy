@@ -1,4 +1,4 @@
-FROM phusion/baseimage:0.9.17
+FROM phusion/baseimage:0.9.20
 
 ENV HOME /root
 
@@ -11,10 +11,11 @@ RUN apt-get update --fix-missing && apt-get install -y \
   libssl-dev \
   libxml2-dev \
   libxslt1-dev \
-  python-dev \
-  python-pip \
+  python3-dev \
+  python3-pip \
   zlib1g-dev
 
-RUN pip install scrapy==1.0.3 ipython==4.0.0
+RUN pip3 install --upgrade pip
+RUN pip3 install scrapy==1.3.3 ipython==5.3.0
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
